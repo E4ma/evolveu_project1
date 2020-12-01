@@ -1,0 +1,349 @@
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+    
+}
+body{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    
+  }
+ 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+ .cartoon{
+     position: relative;
+    animation-name: cartoonslide;
+    animation-duration: 5s;
+    animation-fill-mode: backwards;
+ }
+
+   /* The animation code */
+   @keyframes cartoonslide {
+    0% {right: 300px;}
+    100%{right: 0px;}
+  
+    }
+
+  .bubble {
+
+    position: relative;
+    font-family: 'Great Vibes', cursive;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+    width: 800px;
+    background: #a2d9ff;;
+    border-radius: 40px;
+    padding: 14px;
+    text-align: center;
+    color: #000;
+    float: right;
+  }
+  
+  .bubble-bottom-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid #a2d9ff;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #a2d9ff;
+    border-bottom: 20px solid transparent;
+    left: 18px;
+    bottom: -24px;
+  }
+  
+
+  .typewriter  {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color:transparent; }
+}
+
+  .rows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #a2d9ff;
+  margin-top: -5px;
+  padding: 10px;
+    
+  }
+  
+  #btn{
+    padding: 15px 25px;
+    font-size: 8px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #5f6c7b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
+  }
+  
+  #btn:hover {background-color: #3da9fc}
+  
+  #btn:active {
+    background-color: #ef4565;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+   
+   #site-header {
+    /* background-color: rgba(0, 0, 0, .85); */
+    backdrop-filter: saturate(180%) blur(20px);
+    
+  }
+  #site-header a {
+    color: #90b4ce;
+    transition: ease-in-out color .15s;
+    font-weight: 500;
+  }
+  #site-header a:hover {
+    color: #094067;
+    text-decoration: none;
+  }
+  
+  
+  
+  #introtext{
+    color: #094067;
+    
+  }
+  
+  
+  
+  .flex-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+  h1{
+    font-size:2em;
+    margin:.67em 0;
+    position: relative;
+    text-align: center;
+    animation-name: slide;
+    animation-duration: 5s;  
+    animation-fill-mode: backwards;
+    color: #094067;
+    font-family: 'Sacramento', cursive;
+  }
+  
+  /* The animation code */
+  @keyframes slide {
+    0% {top: 200px;}
+    100%{top: 0px;}
+  
+    }
+  .logo{
+    font-family: 'Great Vibes', cursive;
+    color: #ef4565;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .logo:hover {
+    opacity: 0.7;
+}
+  #card{
+    height: 100%;
+    display: flex;
+   
+    align-content: flex-end;
+  }
+  .flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    border-radius: 45px;
+    perspective: 1000px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    display: block;
+    background-color: transparent;
+    color: #094067;
+    border: 1px solid #f1f1f1;
+    border-radius: 45px;
+  }
+  
+  .flip-box-back {
+    display: block;
+    justify-content: center;
+    padding: 30px;
+    background-color:transparent;
+    color: #5f6c7b;
+    border: 1px solid #f1f1f1;
+    border-radius: 45px;
+    transform: rotateY(180deg);
+  }
+  #contact{
+    border-radius: 5px;
+    padding: 20px;
+  }
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 12px;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  .footer {
+   background-color: #a2d9ff;
+  display: block;
+  margin-top: -3px;
+  justify-content: center;
+  
+    }
+    .copyright {
+        display: flex;
+        margin-top: auto;
+    margin-right: 0px;
+    margin-bottom: auto;
+    margin-left: 0px;
+        
+      }
+    .contact {
+        display: flex;
+        margin-top: auto;
+    margin-right: 0px;
+    margin-bottom: auto;
+    margin-left: 0px;
+    text-align: center;
+    justify-content: center;
+        
+    }
+    .socialmedia {
+        display: block;
+        margin-top: auto;
+        margin-right: 0px;
+        margin-bottom: auto;
+        margin-left: 0px;
+        text-align: center;
+        justify-content: center;
+        
+    }
+    
+    .fa {
+      padding: 10px;
+      font-size: 30px;
+      width: 30px;
+      text-decoration: none;
+      margin: 3px 1px;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    .fa-linkedin .fa-instagram {
+      background: #007bb5;
+      color: white;
+      border-radius: 45px;
+    }
+    .fa-github {
+      background: transparent;
+      color: black;
+      border-radius: 25px;
+    }
+    
